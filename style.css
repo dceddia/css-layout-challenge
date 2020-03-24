@@ -1,1 +1,117 @@
-/* Fill this in */
+html {
+  height: 100%;
+}
+* {
+  /* show what happens without this, nav bar is too wide */
+  box-sizing: border-box;
+  font-family: "TT Commons Medium";
+  font-size: 14px;
+}
+
+body {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/**** Sidebar ****/
+
+.sidebar {
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  background: #343951;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.logo {
+  margin: 0 40px 40px 40px;
+  align-self: flex-start;
+}
+
+/** Nav **/
+nav {
+  /* this border won't be the right width if padding is on the .sidebar */
+  border-bottom: 1px solid #4e5265;
+  padding: 0 40px;
+  margin-bottom: 20px;
+}
+.nav-item {
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #b2b4bd;
+}
+.nav-item img {
+  width: 18px;
+  height: 18px;
+  filter: invert(69%) sepia(8%) saturate(211%) hue-rotate(192deg) brightness(103%) contrast(92%);
+  margin-right: 25px;
+}
+.nav-item.active {
+  color: #fff;
+}
+.nav-item.active img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+}
+.nav-item.active:before {
+  height: 100%;
+  width: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  content: ' ';
+  background: #fff;
+  position: absolute;
+  left: -40px;
+}
+
+/** Actions **/
+.actions {
+  background: #464B61;
+  border-radius: 20px;
+  width: 150px;
+  padding: 20px 15px;
+  margin: auto auto 20px auto;
+  color: #9EA1AB;
+}
+.actions-item {
+  display: flex;
+  align-items: center;
+}
+.actions-item + .actions-item {
+  margin-top: 0.4rem;
+}
+.actions-item img {
+  width: 18px;
+  margin-right: 5px;
+  height: 18px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+}
+.create-btn {
+  display: flex;
+  border-radius: 6px;
+  background: #FFA000;
+  border: none;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 auto;
+  width: 150px;
+}
+.create-btn .text {
+  flex: 1;
+}
+.create-btn:after {
+  content: '+';
+  width: 20px;
+  height: 20px;
+  background: #FFB333;
+  display: inline-block;
+  border-radius: 3px;
+}
+
