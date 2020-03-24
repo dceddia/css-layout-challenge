@@ -20,9 +20,11 @@ body {
 
 h2 {
   font-size: 1.8rem;
+  color: #353A52;
 }
 h3 {
   font-size: 1.2rem;
+  color: #52566B;
 }
 
 ul {
@@ -300,4 +302,67 @@ nav {
 .file-actions img {
   filter: invert(72%) sepia(21%) saturate(435%) hue-rotate(193deg) brightness(85%) contrast(84%);
   width: 20px;
+}
+
+/*** Shared With Me ***/
+.shared {
+  display: flex;
+}
+.shared-project {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  display: grid;
+  margin-right: 15px;
+  padding: 10px 15px;
+  grid-template-rows: 40px 1.5rem 1.5rem;
+  grid-template-columns: 70px 70px;
+  grid-template-areas:
+    "folder participants"
+    "title title"
+    "date date";
+  box-shadow: 0 6px 25px #EEEFF4;
+}
+.shared-icon {
+  align-self: center;
+}
+.shared-participants {
+  grid-area: participants;
+  align-self: center;
+}
+.shared-participants li {
+  display: inline-block;
+  margin-left: -10px;
+}
+.shared-participants li:first-child {
+  margin-left: 0px;
+}
+.shared-participants li.more-participants {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: -9px;
+  border: 1px solid #d0d1d7;
+}
+.shared-participants img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.shared h3 {
+  grid-area: title;
+  align-self: center;
+}
+.shared .file-count {
+  grid-area: date;
+  align-self: center;
+  color: #949BC0;
+  font-size: 0.9rem;
 }
