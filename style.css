@@ -4,13 +4,18 @@ html {
 * {
   /* show what happens without this, nav bar is too wide */
   box-sizing: border-box;
-  font-family: "TT Commons Medium";
+}
+
+body,
+button,
+input {
+  font-family: 'TT Commons Medium';
   font-size: 14px;
 }
 
 body {
   display: grid;
-  grid-template-columns: 220px auto;
+  grid-template-columns: 220px 1fr 340px;
   grid-gap: 20px;
   min-height: 100%;
   height: 100%;
@@ -20,11 +25,11 @@ body {
 
 h2 {
   font-size: 1.8rem;
-  color: #353A52;
+  color: #353a52;
 }
 h3 {
   font-size: 1.2rem;
-  color: #52566B;
+  color: #52566b;
 }
 
 ul {
@@ -88,14 +93,16 @@ nav {
 .nav-item img {
   width: 18px;
   height: 18px;
-  filter: invert(69%) sepia(8%) saturate(211%) hue-rotate(192deg) brightness(103%) contrast(92%);
+  filter: invert(69%) sepia(8%) saturate(211%) hue-rotate(192deg)
+    brightness(103%) contrast(92%);
   margin-right: 25px;
 }
 .nav-item.active {
   color: #fff;
 }
 .nav-item.active img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%)
+    contrast(105%);
 }
 .nav-item.active:before {
   height: 100%;
@@ -110,12 +117,12 @@ nav {
 
 /** Actions **/
 .actions {
-  background: #464B61;
+  background: #464b61;
   border-radius: 20px;
   width: 150px;
   padding: 20px 15px;
   margin: auto auto 20px auto;
-  color: #9EA1AB;
+  color: #9ea1ab;
 }
 .actions-item {
   display: flex;
@@ -128,12 +135,13 @@ nav {
   width: 18px;
   margin-right: 5px;
   height: 18px;
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(105%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(82deg) brightness(105%)
+    contrast(105%);
 }
 .create-btn {
   display: flex;
   border-radius: 6px;
-  background: #FFA000;
+  background: #ffa000;
   border: none;
   padding: 5px;
   color: #fff;
@@ -148,7 +156,7 @@ nav {
   content: '+';
   width: 20px;
   height: 20px;
-  background: #FFB333;
+  background: #ffb333;
   display: inline-block;
   border-radius: 3px;
 }
@@ -156,7 +164,7 @@ nav {
 /**** Main Content ****/
 
 .content {
-  background: #F5F6FB;
+  background: #f5f6fb;
   padding: 20px;
 }
 
@@ -207,10 +215,10 @@ nav {
   grid-template-rows: 60px 2rem 2rem;
   grid-template-columns: 70px 70px;
   grid-template-areas:
-    "folder participants"
-    "title title"
-    "date date";
-  box-shadow: 0 6px 25px #EEEFF4;
+    'folder participants'
+    'title title'
+    'date date';
+  box-shadow: 0 6px 25px #eeeff4;
 }
 .project-icon {
   align-self: center;
@@ -223,7 +231,8 @@ nav {
   background: transparent;
 }
 .project-actions img {
-  filter: invert(72%) sepia(21%) saturate(435%) hue-rotate(193deg) brightness(85%) contrast(84%);
+  filter: invert(72%) sepia(21%) saturate(435%) hue-rotate(193deg)
+    brightness(85%) contrast(84%);
   width: 20px;
 }
 .project-participants {
@@ -263,7 +272,7 @@ nav {
 .project .created-date {
   grid-area: date;
   align-self: center;
-  color: #949BC0;
+  color: #949bc0;
   font-size: 0.9rem;
 }
 
@@ -277,7 +286,7 @@ nav {
   margin-right: 10px;
 }
 .recent-files .heading {
-  color: #828AB6;
+  color: #828ab6;
 }
 .recent-files .cell {
   display: flex;
@@ -285,7 +294,7 @@ nav {
   padding: 10px;
   align-items: center;
 }
-.cell:nth-child(4n+1) {
+.cell:nth-child(4n + 1) {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -300,7 +309,8 @@ nav {
   align-items: center;
 }
 .file-actions img {
-  filter: invert(72%) sepia(21%) saturate(435%) hue-rotate(193deg) brightness(85%) contrast(84%);
+  filter: invert(72%) sepia(21%) saturate(435%) hue-rotate(193deg)
+    brightness(85%) contrast(84%);
   width: 20px;
 }
 
@@ -318,10 +328,10 @@ nav {
   grid-template-rows: 40px 1.5rem 1.5rem;
   grid-template-columns: 70px 70px;
   grid-template-areas:
-    "folder participants"
-    "title title"
-    "date date";
-  box-shadow: 0 6px 25px #EEEFF4;
+    'folder participants'
+    'title title'
+    'date date';
+  box-shadow: 0 6px 25px #eeeff4;
 }
 .shared-icon {
   align-self: center;
@@ -363,6 +373,112 @@ nav {
 .shared .file-count {
   grid-area: date;
   align-self: center;
-  color: #949BC0;
+  color: #949bc0;
   font-size: 0.9rem;
+}
+
+/*** Stats (right panel) ***/
+
+.stats {
+  background: #f5f6fb;
+}
+.stats > * {
+  padding: 20px 40px;
+}
+.storage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.storage h2 {
+  align-self: flex-start;
+}
+.usage-graph {
+  margin-bottom: 20px;
+}
+.usage-inner {
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #969cc1;
+  font-size: 1.8rem;
+}
+.usage-percent {
+  font-size: 2.5rem;
+  color: #353a52;
+  display: flex;
+  align-items: center;
+}
+.usage-pct-symbol {
+  font-size: 0.65em;
+  padding-left: 5px;
+}
+.usage-bytes {
+  color: #828ab6;
+  margin-bottom: 20px;
+}
+.usage-list {
+  width: 100%;
+}
+.usage-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d0d1d7;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.usage-item img {
+  margin-right: 8px;
+}
+.usage-item-content {
+  flex: 1;
+  color: #353a52;
+}
+.usage-item-files {
+  color: #828ab6;
+}
+.usage-item-bytes {
+  background: #fff;
+  align-self: center;
+  padding: 6px 10px;
+  border-radius: 3px;
+  padding-bottom: 3px;
+  box-shadow: 0 1px 5px rgba(208, 209, 216, 0.5);
+}
+
+/*** User profile & actions (top right) ***/
+
+.user-profile {
+  display: flex;
+  border-bottom: 1px solid #d0d1d7;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+.user-profile > img {
+  margin-right: 20px;
+}
+.user-profile .user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.user-name {
+  padding-top: 3px;
+  margin-right: 10px;
+  color: #363b52;
+}
+.user-name img {
+  position: relative;
+  top: 4px;
+  left: -2px;
+}
+.user-avatar {
+  border-radius: 50%;
+  box-shadow: 0 1px 5px rgba(208, 209, 216, 0.8);
 }
