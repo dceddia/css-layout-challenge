@@ -394,7 +394,48 @@ nav {
   align-self: flex-start;
 }
 .usage-graph {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.usage-graph .arc {
+  position: absolute;
+  width: 190px;
+  top: -20px;
+  left: -20px;
+  fill: transparent;
+}
+.arc circle {
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-width: 7px;
+}
+.arc--docs {
+  stroke-dasharray: 570.8 570.8;
+  stroke-dashoffset: 371.02;
+  transform: rotate(-32deg);
+  transform-origin: center;
+  stroke: #ffa000;
+}
+.arc--videos {
+  stroke-dasharray: 570.8 570.8;
+  stroke-dashoffset: 439.516;
+  transform: rotate(176.4deg);
+  transform-origin: center;
+  stroke: #689ef8;
+}
+.arc--images {
+  stroke-dasharray: 570.8 570.8;
+  stroke-dashoffset: 492.888;
+  transform: rotate(269deg);
+  transform-origin: center;
+  stroke: #49c39d;
+}
+.arc--others {
+  stroke-dasharray: 570.8 570.8;
+  stroke-dashoffset: 472.056;
+  transform: rotate(104.4deg);
+  transform-origin: center;
+  stroke: #bbbeca;
 }
 .usage-inner {
   background: #fff;
